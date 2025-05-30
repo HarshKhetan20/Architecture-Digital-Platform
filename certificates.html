@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Сертификаты компании | Digital Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS for grid and base styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fff;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: #fff;
+      border-bottom: none;
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+    }
+    .navbar-brand img {
+      height: 38px;
+    }
+    .navbar-nav .nav-link {
+      color: #222 !important;
+      text-transform: uppercase;
+      font-weight: 400;
+      padding: 0.5rem 1.2rem;
+      border-bottom: 2px solid transparent;
+      transition: border 0.2s;
+    }
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link:focus,
+    .navbar-nav .nav-link:hover {
+      border-bottom: 2px solid #222;
+      font-weight: 500;
+      color: #222 !important;
+      background: transparent;
+    }
+    .cert-title {
+      font-size: 3rem;
+      font-weight: 300;
+      color: #bdbdbd;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.1em;
+      margin-top: 2.5rem;
+      line-height: 1.1;
+    }
+    .cert-title strong {
+      color: #222;
+      font-weight: 900;
+      display: block;
+      margin-top: -0.1em;
+      letter-spacing: 0.01em;
+    }
+    .cert-row {
+      margin-top: 3.5rem;
+      margin-bottom: 3.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 3.5rem;
+    }
+    .cert-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+      padding: 1.2rem 1.2rem 1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 270px;
+      min-height: 370px;
+      transition: box-shadow 0.2s;
+    }
+    .cert-card img {
+      width: 210px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      background: #fafafa;
+    }
+    /* Pagination */
+    .cert-pagination {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.1rem;
+      margin-top: 1.7rem;
+      margin-bottom: 1.7rem;
+      color: #222;
+      font-family: inherit;
+      justify-content: flex-end;
+    }
+    .cert-pagination .cert-page-num {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .cert-pagination .cert-page-slash {
+      color: #bdbdbd;
+      margin: 0 0.6rem;
+    }
+    .cert-pagination .cert-page-total {
+      color: #bdbdbd;
+      font-size: 1.1rem;
+    }
+    .cert-pagination .cert-page-btn {
+      border: none;
+      background: #fafafa;
+      color: #bdbdbd;
+      font-size: 1.1rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+      cursor: pointer;
+      margin-left: 8px;
+      margin-right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+    }
+    .cert-pagination .cert-page-btn:active,
+    .cert-pagination .cert-page-btn:focus,
+    .cert-pagination .cert-page-btn:hover {
+      background: #e0e0e0;
+      color: #222;
+    }
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 2.5rem 0 1.5rem 0;
+      font-size: 1rem;
+      margin-top: 4rem;
+    }
+    footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    footer img {
+      height: 40px;
+      margin-bottom: 1rem;
+    }
+    footer .fw-bold {
+      font-size: 1.1rem;
+      margin-bottom: 0.7rem;
+    }
+    footer div {
+      margin-bottom: 0.6rem;
+    }
+    footer a, footer a:visited {
+      color: #fff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    footer .small {
+      color: #bdbdbd;
+      font-size: 0.95rem;
+    }
+    footer i {
+      font-size: 1.3rem;
+      margin-right: 12px;
+      color: #fff;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    footer i:hover {
+      opacity: 1;
+    }
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .cert-row { gap: 2rem; }
+      .cert-card { min-width: 210px; }
+    }
+    @media (max-width: 991.98px) {
+      .cert-title { font-size: 2rem; }
+      .cert-row { flex-direction: column; align-items: center; gap: 1.5rem; }
+      .cert-card { min-width: 180px; min-height: 220px; }
+      footer .container { flex-direction: column; gap: 1.2rem; text-align: left; }
+    }
+    @media (max-width: 767.98px) {
+      .cert-title { font-size: 1.5rem; }
+      .cert-card img { width: 140px; height: 180px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Digital Project">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Проекты</a></li>
+          <li class="nav-item"><a class="nav-link active" href="certificates.html">Сертификаты</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="container">
+    <h1 class="cert-title mb-5">
+      СЕРТИФИКАТЫ <strong>КОМПАНИИ</strong>
+    </h1>
+    <!-- Certificates Row -->
+    <div class="cert-row">
+      <div class="cert-card">
+        <img src="images/cert1.jpg" alt="Certificate 1">
+      </div>
+      <div class="cert-card">
+        <img src="images/cert2.jpg" alt="Certificate 2">
+      </div>
+      <div class="cert-card">
+        <img src="images/cert3.jpg" alt="Certificate 3">
+      </div>
+    </div>
+    <!-- Pagination -->
+    <div class="cert-pagination">
+      <span class="cert-page-num">01</span>
+      <span class="cert-page-slash">/</span>
+      <span class="cert-page-total">05</span>
+      <button class="cert-page-btn" disabled>&larr;</button>
+      <button class="cert-page-btn">&rarr;</button>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div>
+        <img src="images/logo.png" alt="Logo">
+        <div class="mt-2">Digital Project</div>
+      </div>
+      <div>
+        <div class="fw-bold mb-2">Информация</div>
+        <div>Главная</div>
+        <div>Галерея</div>
+        <div>Проекты</div>
+        <div>Сертификаты</div>
+        <div>Контакты</div>
+      </div>
+      <div>
+        <div class="fw-bold mb-2">Контакты</div>
+        <div>100000, Республика Казахстан,<br>г. Караганда, ул. Телевизионная 10</div>
+        <div>+7 (701) 77 76 811</div>
+        <div>Galym.sultanov@mail.ru</div>
+      </div>
+      <div>
+        <div class="fw-bold mb-2">Социальные сети</div>
+        <div>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-linkedin"></i>
+          <i class="bi bi-pinterest"></i>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-3 small">&copy; 2019 Digital Project. Все права защищены.</div>
+  </footer>
+  <!-- Bootstrap JS for navbar collapse -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Icons for social icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</body>
+</html>
