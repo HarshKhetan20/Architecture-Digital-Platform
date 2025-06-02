@@ -46,7 +46,7 @@
     }
 
     .contact-title {
-      font-size: 80px;
+      font-size: 60px;
       font-weight: 300;
       color: #999;
       margin-bottom: 10px;
@@ -480,11 +480,9 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <a href="index.html" style="display: inline-block;">
-          <img src="images/logo.png" alt="Logo" style="width:110px; height:auto;"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        </a>
+      <a class="navbar-brand" href="index.html" style="display: inline-block;">
+        <img src="images/logo.png" alt="Logo" style="width:110px; height:auto;"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
         <span style="display:none;">PA<br><small style="font-size: 10px; font-weight: 300;">DIGITAL
             PROJECT</small></span>
       </a>
@@ -527,9 +525,8 @@
 
         <div class="col-lg-6 col-md-12">
           <div class="map-container-fluid">
-            <img src="images\map.jpg" alt="Map" class="map-image">
+            <img src="images/map.jpg" alt="Map" class="map-image">
           </div>
-
           <div class="map-marker"></div>
         </div>
       </div>
@@ -543,7 +540,7 @@
       <!-- Logo -->
       <div class="footer-col logo-col">
         <a href="index.html" style="display: inline-block;">
-          <img src="images\logo-removebg-preview.png" alt="Digital Project" class="footer-logo">
+          <img src="images/logo-removebg-preview.png" alt="Digital Project" class="footer-logo">
         </a>
       </div>
       <!-- Info Links -->
@@ -637,7 +634,8 @@
           <div class="success-icon">
             <i class="fas fa-check"></i>
           </div>
-          <h3 class="success-title">Спасибо !</h3>
+          <!-- Add id="successModalLabel" here -->
+          <h3 class="success-title" id="successModalLabel">Спасибо !</h3>
           <p class="success-message">
             Ваше сообщение отправлено мы свяжемся с вами в ближайшее время
           </p>
@@ -646,6 +644,7 @@
       </div>
     </div>
   </div>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   <script>
