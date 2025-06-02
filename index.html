@@ -9,6 +9,13 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -19,6 +26,8 @@
       font-family: 'Inter', sans-serif;
       color: #333;
       background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
     }
 
     /* Header */
@@ -48,7 +57,7 @@
     }
 
     /* Hero Section */
-     .hero-section {
+    .hero-section {
       background: white;
       padding: 80px 0;
     }
@@ -140,7 +149,7 @@
       height: 700px;
       object-fit: cover;
       border-radius: 0;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
       background: #f7f7f7;
       display: block;
     }
@@ -169,13 +178,13 @@
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
       transition: background 0.2s, color 0.2s, border 0.2s;
       z-index: 2;
-      opacity: 0.85;
+      opacity: 2;
     }
 
     .carousel-btn-on-image:hover {
       background: #f5f5f5;
       color: #111;
-      opacity: 1;
+      opacity: 2;
     }
 
     /* About Section */
@@ -362,6 +371,8 @@
     /* Contact Section */
     .contact-section {
       padding: 40px 0 0 0;
+      margin-bottom: 0;
+      /* Add this line */
     }
 
     .contact-heading {
@@ -464,6 +475,9 @@
       padding: 0;
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
+      margin-top: 0;
+      margin-bottom: 0;
+      /* Add this line to ensure no bottom margin */
     }
 
     .footer-container {
@@ -471,7 +485,7 @@
       justify-content: space-between;
       align-items: flex-start;
       padding: 55px 60px 30px 60px;
-      max-width: 1400px;
+      max-width: 1500px;
       margin: 0 auto;
       gap: 40px;
     }
@@ -563,8 +577,10 @@
       color: #bdbdbd;
       text-align: center;
       font-size: 0.98rem;
-      padding: 18px 0 15px 0;
-      margin-top: 18px;
+      padding: 18px 0 0 0;
+      /* Changed bottom padding from 15px to 0 */
+      margin: 0;
+      /* Remove all margins */
       letter-spacing: 0.01em;
     }
 
@@ -574,25 +590,41 @@
         padding-top: 30px;
         padding-bottom: 30px;
       }
-      .carousel-inner, .building-image {
+
+      .carousel-inner,
+      .building-image {
         width: 90vw;
         height: 60vw;
         max-width: 420px;
         max-height: 420px;
       }
-      .project-title { font-size: 28px; }
-      .project-name { font-size: 36px; }
+
+      .project-title {
+        font-size: 28px;
+      }
+
+      .project-name {
+        font-size: 36px;
+      }
     }
 
     @media (max-width: 600px) {
-      .carousel-inner, .building-image {
+
+      .carousel-inner,
+      .building-image {
         width: 98vw;
         height: 55vw;
         max-width: 98vw;
         max-height: 320px;
       }
-      .project-title { font-size: 1.2rem; }
-      .project-name { font-size: 1.7rem; }
+
+      .project-title {
+        font-size: 1.2rem;
+      }
+
+      .project-name {
+        font-size: 1.7rem;
+      }
     }
 
     @media (max-width: 768px) {
@@ -939,7 +971,7 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
+      <div class="footer-bottom pb-4">
         &copy; 2019 Digital Project. Все права защищены.
       </div>
     </footer>
@@ -950,49 +982,49 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const carouselElement = document.getElementById('buildingCarousel');
-      const carousel = new bootstrap.Carousel(carouselElement, { interval: false, ride: false, pause: true });
-      const slides = carouselElement.querySelectorAll('.carousel-item');
-      const totalSlides = slides.length;
-      const currentPage = document.getElementById('currentPage');
-      const totalPages = document.getElementById('totalPages');
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      let currentSlide = 0;
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const carouselElement = document.getElementById('buildingCarousel');
+        const carousel = new bootstrap.Carousel(carouselElement, { interval: false, ride: false, pause: true });
+        const slides = carouselElement.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+        const currentPage = document.getElementById('currentPage');
+        const totalPages = document.getElementById('totalPages');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
 
-      totalPages.textContent = totalSlides.toString().padStart(2, '0');
-      function updatePagination() {
-        currentPage.textContent = (currentSlide + 1).toString().padStart(2, '0');
-        prevBtn.disabled = currentSlide === 0;
-        nextBtn.disabled = currentSlide === totalSlides - 1;
-      }
-      updatePagination();
-
-      prevBtn.addEventListener('click', function () {
-        if (currentSlide > 0) {
-          carousel.prev();
+        totalPages.textContent = totalSlides.toString().padStart(2, '0');
+        function updatePagination() {
+          currentPage.textContent = (currentSlide + 1).toString().padStart(2, '0');
+          prevBtn.disabled = currentSlide === 0;
+          nextBtn.disabled = currentSlide === totalSlides - 1;
         }
-      });
-      nextBtn.addEventListener('click', function () {
-        if (currentSlide < totalSlides - 1) {
-          carousel.next();
-        }
-      });
-
-      carouselElement.addEventListener('slid.bs.carousel', function (e) {
-        currentSlide = Array.from(slides).indexOf(e.relatedTarget);
         updatePagination();
-      });
 
-      // Keyboard navigation
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft') prevBtn.click();
-        if (e.key === 'ArrowRight') nextBtn.click();
+        prevBtn.addEventListener('click', function () {
+          if (currentSlide > 0) {
+            carousel.prev();
+          }
+        });
+        nextBtn.addEventListener('click', function () {
+          if (currentSlide < totalSlides - 1) {
+            carousel.next();
+          }
+        });
+
+        carouselElement.addEventListener('slid.bs.carousel', function (e) {
+          currentSlide = Array.from(slides).indexOf(e.relatedTarget);
+          updatePagination();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowLeft') prevBtn.click();
+          if (e.key === 'ArrowRight') nextBtn.click();
+        });
       });
-    });
-  </script>
+    </script>
 </body>
 
 </html>
