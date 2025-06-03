@@ -1,7 +1,7 @@
 html,
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #fff;
+    background: white;
     color: #222;
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ body {
 body {
     font-family: 'Inter', sans-serif;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
