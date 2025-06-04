@@ -1,6 +1,6 @@
 html,
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'TT Hoves', Arial, sans-serif;
     background: white;
     color: #222;
     margin: 0;
@@ -11,11 +11,11 @@ body {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'TT Hoves', Arial, sans-serif;
     color: #333;
     background-color: white;
     margin: 0;
@@ -25,29 +25,62 @@ body {
 .navbar {
     background: white;
     padding: 6px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* Make it fluid */
+    height: 102px;
 }
 
 .navbar-brand {
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 12px;
     color: #333 !important;
 }
 
 .navbar-nav .nav-link {
     color: #666 !important;
-    font-weight: 600;
-    margin: 0 8px;
+    font-weight: 400;
+    margin: 0 24px;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 12px;
     letter-spacing: 1.5px;
+    border-top: #222;
+    border-bottom: 2px;
 }
 
 .navbar-nav .nav-link:hover {
     color: #333 !important;
 }
 
-/*Foooter*/
+.nav-link-home.active {
+    position: relative;
+    color: #333;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    padding: 4px 0;
+}
+
+.nav-link-home.active::before,
+.nav-link-home.active::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 60%;
+    background: #333;
+    margin: 0 auto;
+    border-radius: 0px;
+}
+
+.nav-link-home.active::before {
+    margin-bottom: 2px;
+}
+
+.nav-link-home.active::after {
+    margin-top: 2px;
+}
+
+
+
 /* Footer */
 .custom-footer {
     background: #2a2a2a;
@@ -81,16 +114,18 @@ body {
 }
 
 .footer-logo {
-    height: 150px;
+    width: 145px;
+    height: 95px;
     margin-bottom: 12px;
     filter: brightness(0) invert(1);
 }
 
 .footer-heading {
     font-weight: 700;
-    font-size: 1.09rem;
+    font-size: 16px;
+    line-height: 100%;
     margin-bottom: 16px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0px;
 }
 
 .footer-links,
@@ -103,8 +138,10 @@ body {
 .footer-links li,
 .footer-contact li {
     margin-bottom: 11px;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 3%;
 }
 
 .footer-links li a {
@@ -153,9 +190,11 @@ body {
     background: #232323;
     color: #bdbdbd;
     text-align: center;
-    font-size: 0.98rem;
+    font-size: 12px;
     padding: 18px 0 15px 0;
     margin-top: 18px;
+    line-height: 22px;
+    letter-spacing: 0px;
     letter-spacing: 0.01em;
 }
 

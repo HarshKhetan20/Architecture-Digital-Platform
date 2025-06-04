@@ -13,23 +13,30 @@
 
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+   <nav class="navbar navbar-expand-lg fixed-top" style="background: white; padding: 6px 0; height: 102px;">
     <div class="container">
-      <a class="navbar-brand" href="index.html" style="display: inline-block;">
-        <img src="images/logo.png" alt="Logo" style="width:110px; height:auto;"
+      <a class="navbar-brand" href="index.html" style="font-weight: 400; font-size: 12px; color: #333;">
+        <img src="images/logo.png" alt="Logo" style="width: 70px; height: 43.71px; margin-left: 135px;"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span style="display:none;">PA<br><small style="font-size: 10px; font-weight: 300;">DIGITAL
-            PROJECT</small></span>
       </a>
-      <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="index.html">Главная</a>
-        <a class="nav-link" href="gallery.html">Галерея</a>
-        <a class="nav-link" href="projects.html">Проекты</a>
-        <a class="nav-link" href="certificates.html">Сертификаты</a>
-        <a class="nav-link" href="contact.html">Контакты</a>
+      <!-- Toggler button for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collapsible nav links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto navbar-nav-scroll" style="--bs-scroll-height: 200px;">
+          <li class="nav-item"><a class="nav-link nav-link-home active" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Проекты</a></li>
+          <li class="nav-item"><a class="nav-link" href="certificates.html">Сертификаты</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+        </ul>
       </div>
     </div>
   </nav>
+
 
   <div class="container py-5">
     <h1 class="gallery-title mb-4 py-5">
@@ -146,9 +153,9 @@
 
     <!-- Custom Pagination -->
     <div class="gallery-pagination">
-      <span class="gallery-page-num" id="currentPage">01</span>
+      <span class="gallery-page-num" style="margin-right: 20px;" id="currentPage">01</span>
       <span class="gallery-page-slash">/</span>
-      <span class="gallery-page-total">05</span>
+      <span class="gallery-page-total" style="margin-left: 20px;">05</span>
       <button class="gallery-page-btn" id="prevBtn">&larr;</button>
       <button class="gallery-page-btn" id="nextBtn">&rarr;</button>
     </div>

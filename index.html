@@ -8,45 +8,54 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top" style="background: white; padding: 6px 0; height: 102px;">
     <div class="container">
-      <a class="navbar-brand" href="index.html" style="display: inline-block;">
-        <img src="images/logo.png" alt="Logo" style="width:110px; height:auto;"
+      <a class="navbar-brand" href="index.html" style="font-weight: 400; font-size: 12px; color: #333;">
+        <img src="images/logo.png" alt="Logo" style="width: 70px; height: 43.71px; margin-left: 135px;"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span style="display:none;">PA<br><small style="font-size: 10px; font-weight: 300;">DIGITAL
-            PROJECT</small></span>
       </a>
-      <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="index.html">Главная</a>
-        <a class="nav-link" href="gallery.html">Галерея</a>
-        <a class="nav-link" href="projects.html">Проекты</a>
-        <a class="nav-link" href="certificates.html">Сертификаты</a>
-        <a class="nav-link" href="contact.html">Контакты</a>
+      <!-- Toggler button for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collapsible nav links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto navbar-nav-scroll" style="--bs-scroll-height: 200px;">
+          <li class="nav-item"><a class="nav-link nav-link-home active" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Проекты</a></li>
+          <li class="nav-item"><a class="nav-link" href="certificates.html">Сертификаты</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+        </ul>
       </div>
     </div>
   </nav>
 
   <div class="main-content">
-    <section class="hero-section" style="margin-top: 80px;">
+    <section class="hero-section" style="margin-top: 10px;">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6">
+          <div class="col-lg-5">
             <h1 class="project-title">PROJECT</h1>
             <h2 class="project-name">NURTOWN</h2>
             <div class="custom-controls">
-              <button class="arrow-btn" id="prevBtn" aria-label="Previous">&larr;</button>
-              <button class="arrow-btn" id="nextBtn" aria-label="Next">&rarr;</button>
+              <button class="arrow-btn mt-5" style="width: 52.95px; height: 53px; margin-top:656px;" id="prevBtn"
+                aria-label="Previous">&larr;</button>
+              <button class="arrow-btn mt-5" style="width: 52.95px; height: 53px; margin-top:656px;" id="nextBtn"
+                aria-label="Next">&rarr;</button>
             </div>
-            <div class="custom-pagination">
-              <span class="current" id="currentPage">01</span>
+            <div class="custom-pagination margin-top:656px mt-5">
+              <span class="current" style="margin-right: 20px;" id="currentPage">01</span>
               <span> / </span>
-              <span id="totalPages">02</span>
+              <span style="margin-left: 20px;" id="totalPages">02</span>
             </div>
           </div>
           <div class="col-lg-6">
@@ -69,28 +78,30 @@
 
     <!-- About Section -->
     <section class="about-section">
-      <section style="background: #f7f8fa; padding: 60px 0;">
+      <section style="background: rgb(240, 239, 239); padding: 60px 0;">
         <div class="container">
           <div class="d-flex flex-row align-items-center justify-content-center" style="gap: 60px;">
             <!-- Image collage -->
             <div
               style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 18px; width: 420px;">
               <img src="images/about1.jpg"
-                style="width: 200px; height: 200px; object-fit: cover; border-radius: 8px; grid-column: 1; grid-row: 1;"
+                style="width: 270px; height: 265px; object-fit: cover; border-radius: 0px; grid-column: 1; grid-row: 1;"
                 alt="">
               <img src="images/about2.jpg"
-                style="width: 200px; height: 350px; object-fit: cover; border-radius: 8px; grid-column: 2; grid-row: 1 / span 2;"
+                style="width: 270px; height: 345px; padding-top: 40px; object-fit: cover; border-radius: 0px; grid-column: 2; grid-row: 1 / span 2;"
                 alt="">
               <img src="images/about3.jpg"
-                style="width: 200px; height: 200px; object-fit: cover; border-radius: 8px; grid-column: 1; grid-row: 2;"
+                style="width: 270px; height: 140px; object-fit: cover; border-radius: 0px; grid-column: 1; grid-row: 2;"
                 alt="">
             </div>
             <!-- Text block -->
             <div>
-              <h1 style="font-size: 3rem; color: #bdbdbd; font-weight: 300; margin-bottom: 0.3em;">
+              <h1
+                style="margin-left: 100px; color: gray; font-weight: 300; font-size: 64px; line-height: 64px; letter-spacing: 0%; padding-top: 20px; padding-bottom: 20px;">
                 О компании
               </h1>
-              <p style="font-size: 1.15rem; color: #222; max-width: 420px; margin-bottom: 2.2em;">
+              <p class="about-text"
+                style="font-size: 16px; line-height: 1.6; color: #000000; margin-top: 20px; margin-bottom: 10px; margin-left: 100px;">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                 scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
@@ -98,7 +109,7 @@
                 electronic typesetting, remaining essentially unchanged.
               </p>
               <a href="#"
-                style="display:inline-block; background:#fff; color:#222; border:none; border-radius:0; font-size:1rem; font-weight:500; letter-spacing:0.1em; padding: 0.9em 2.8em; box-shadow:0 2px 12px rgba(0,0,0,0.04); text-decoration:none; transition:background 0.2s;">
+                style="display:inline-block; background:#fff; color:#222; border:none; border-radius:0; font-size:12px; font-weight:400; letter-spacing:20%;line-height: 12px; padding: 1.5em 5em; box-shadow:0 2px 12px rgba(0,0,0,0.04); text-decoration:none; margin-left: 100px; margin-top: 20px;">
                 ЧИТАТЬ &rarr;
               </a>
             </div>
@@ -113,13 +124,15 @@
       <section style="margin: 60px 0;">
         <section class="tasks-section">
           <div class="container">
-            <h2 class="tasks-title">Основные задачи</h2>
+            <h2 class="tasks-title mt-5">Основные задачи</h2>
             <div class="tasks-row">
               <div class="task-item" data-num="1">
-                <p>Создание комфортных условий и повышение качества обслуживания клиентов</p>
+                <p style="padding-left: 50px; padding-top: 60px;">Создание комфортных условий и повышение качества
+                  обслуживания клиентов</p>
               </div>
               <div class="task-item" data-num="2">
-                <p>Постоянно совершенствовать качество предоставляемых услуг путем обучения персонала, закупки нового
+                <p style="padding-left: 100px; padding-top: 40px;">Постоянно совершенствовать качество предоставляемых
+                  услуг путем обучения персонала, закупки нового
                   оборудования и усиленной рекламы на рынке</p>
               </div>
             </div>
@@ -134,36 +147,38 @@
         <h3 class="projects-title">Наши проекты</h3>
         <div class="row">
           <div class="col-lg-6 col-md-6">
-            <div class="project-card">
+            <div class="project-card" style="width: 570px; height: 255px;">
               <img src="images/project-main.png" class="project-img" alt="Досуговый центр">
-              <div class="project-overlay">
+              <div class="project-overlay" style="display: flex; align-items: center; justify-content: center;">
                 <h5>ДОСУГОВЫЙ<br>ЦЕНТР</h5>
               </div>
             </div>
           </div>
           <div class="col-lg-6 col-md-6">
-            <div class="project-card">
+            <div class="project-card" style="width: 570px; height: 255px;">
               <img src="images/project-right.png" class="project-img" alt="Architecture Project">
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="project-card">
+            <div class="project-card" style="width: 270px; height: 255px;">
               <img src="images/project1.png" class="project-img" alt="Small Project">
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="project-card">
+          <div class="col-lg-4 col-md-12">
+            <div class="project-card" style="width: 370px; height: 255px;">
               <img src="images/project2.png" class="project-img" alt="Residential">
             </div>
           </div>
           <div class="col-lg-4 col-md-6">
-            <div class="project-card">
+            <div class="project-card" style="width: 370px; height: 255px;">
               <img src="images/project3.png" class="project-img" alt="Commercial">
             </div>
           </div>
         </div>
         <div class="view-all-projects">
-          <a class="btn-view-all nav-link" href="projects.html">Все проекты →</a>
+          <a class="btn-view-all nav-link me-5"
+            style="padding-top: 30px; padding-bottom: 30px; padding-left: 30px; padding-right: 30px;"
+            href="projects.html">Все проекты →</a>
         </div>
       </div>
     </section>
@@ -176,124 +191,126 @@
           <div class="col-lg-6">
             <h1 class="contact-heading">Связаться с нами</h1>
             <form class="contact-form">
-              <input type="text" placeholder="Имя">
-              <input type="text" placeholder="Номер телефона*" required>
-              <input type="email" placeholder="E-mail*" required>
-              <input type="text" placeholder="Интересующий товар/услуга">
-              <textarea placeholder="Сообщение*" required></textarea>
-              <div class="form-check mb-2">
+              <input type="text" class="form-control mb-3" placeholder="Имя">
+              <input type="text" class="form-control mb-3" placeholder="Номер телефона*" required>
+              <input type="email" class="form-control mb-3" placeholder="E-mail*" required>
+              <input type="text" class="form-control mb-3" placeholder="Интересующий товар/услуга">
+              <textarea class="form-control mb-3" placeholder="Сообщение*" required rows="4"></textarea>
+              <div class="form-check mb-3">
                 <input class="form-check-input" type="checkbox" id="privacyCheck" required>
                 <label class="form-check-label" for="privacyCheck"></label>
-              </div>
-              <div class="policy-text">
-                Отправляя заявку Вы соглашаетесь с политикой<br>конфиденциальности
+                <div class="policy-text mb-4">
+                  Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
+                </div>
               </div>
               <button type="submit" class="btn btn-submit mb-5">ОТПРАВИТЬ &rarr;</button>
             </form>
           </div>
+
           <!-- Right: Image -->
           <div class="col-lg-6 d-flex align-items-center justify-content-center">
-            <img src="images/contact.png" alt="Contact" class="contact-image">
+            <img src="images/contact.png" alt="Contact" class="contact-image pt-5 mt-5">
           </div>
         </div>
       </div>
     </section>
-  </div>
 
-  <!-- Footer -->
-  <footer class="custom-footer">
-    <div class="footer-container">
-      <!-- Logo -->
-      <div class="footer-col logo-col">
-        <a href="index.html" style="display: inline-block;">
-          <img src="images/logo-removebg-preview.png" alt="Digital Project" class="footer-logo">
-        </a>
-      </div>
-      <!-- Info Links -->
-      <div class="footer-col">
-        <div class="footer-heading">Информация</div>
-        <ul class="footer-links">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="gallery.html">Галерея</a></li>
-          <li><a href="projects.html">Проекты</a></li>
-          <li><a href="certificates.html">Сертификаты</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-        </ul>
-      </div>
-      <!-- Contacts -->
-      <div class="footer-col">
-        <div class="footer-heading">Контакты</div>
-        <ul class="footer-contact">
-          <li><i class="bi bi-geo-alt"></i> 100000, Республика Казахстан,<br>г. Караганда, ул. Телевизионная 10</li>
-          <li><i class="bi bi-telephone"></i> +7 (701) 77 76 811</li>
-          <li><i class="bi bi-envelope"></i> Galym.sultanov@mail.ru</li>
-        </ul>
-      </div>
-      <!-- Social -->
-      <div class="footer-col">
-        <div class="footer-heading">Социальные сети</div>
-        <div class="footer-social">
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-twitter"></i></a>
-          <a href="#"><i class="bi bi-linkedin"></i></a>
-          <a href="#"><i class="bi bi-pinterest"></i></a>
+
+
+    <!-- Footer -->
+    <footer class="custom-footer">
+      <div class="footer-container">
+        <!-- Logo -->
+        <div class="footer-col logo-col">
+          <a href="index.html" style="display: inline-block;">
+            <img src="images/logo-removebg-preview.png" alt="Digital Project" class="footer-logo">
+          </a>
+        </div>
+        <!-- Info Links -->
+        <div class="footer-col">
+          <div class="footer-heading">Информация</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="projects.html">Проекты</a></li>
+            <li><a href="certificates.html">Сертификаты</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+        </div>
+        <!-- Contacts -->
+        <div class="footer-col">
+          <div class="footer-heading">Контакты</div>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt"></i> 100000, Республика Казахстан,<br>г. Караганда, ул. Телевизионная 10</li>
+            <li><i class="bi bi-telephone"></i> +7 (701) 77 76 811</li>
+            <li><i class="bi bi-envelope"></i> Galym.sultanov@mail.ru</li>
+          </ul>
+        </div>
+        <!-- Social -->
+        <div class="footer-col">
+          <div class="footer-heading">Социальные сети</div>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-pinterest"></i></a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom pb-4">
-      &copy; 2019 Digital Project. Все права защищены.
-    </div>
-  </footer>
+      <div class="footer-bottom pb-4">
+        &copy; 2019 Digital Project. Все права защищены.
+      </div>
+    </footer>
 
-  <!-- Bootstrap Icons CDN (add in your <head> if not already present) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap Icons CDN (add in your <head> if not already present) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const carouselElement = document.getElementById('buildingCarousel');
-      const carousel = new bootstrap.Carousel(carouselElement, { interval: false, ride: false, pause: true });
-      const slides = carouselElement.querySelectorAll('.carousel-item');
-      const totalSlides = slides.length;
-      const currentPage = document.getElementById('currentPage');
-      const totalPages = document.getElementById('totalPages');
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      let currentSlide = 0;
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const carouselElement = document.getElementById('buildingCarousel');
+        const carousel = new bootstrap.Carousel(carouselElement, { interval: false, ride: false, pause: true });
+        const slides = carouselElement.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+        const currentPage = document.getElementById('currentPage');
+        const totalPages = document.getElementById('totalPages');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
 
-      totalPages.textContent = totalSlides.toString().padStart(2, '0');
-      function updatePagination() {
-        currentPage.textContent = (currentSlide + 1).toString().padStart(2, '0');
-        prevBtn.disabled = currentSlide === 0;
-        nextBtn.disabled = currentSlide === totalSlides - 1;
-      }
-      updatePagination();
-
-      prevBtn.addEventListener('click', function () {
-        if (currentSlide > 0) {
-          carousel.prev();
+        totalPages.textContent = totalSlides.toString().padStart(2, '0');
+        function updatePagination() {
+          currentPage.textContent = (currentSlide + 1).toString().padStart(2, '0');
+          prevBtn.disabled = currentSlide === 0;
+          nextBtn.disabled = currentSlide === totalSlides - 1;
         }
-      });
-      nextBtn.addEventListener('click', function () {
-        if (currentSlide < totalSlides - 1) {
-          carousel.next();
-        }
-      });
-
-      carouselElement.addEventListener('slid.bs.carousel', function (e) {
-        currentSlide = Array.from(slides).indexOf(e.relatedTarget);
         updatePagination();
-      });
 
-      // Keyboard navigation
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft') prevBtn.click();
-        if (e.key === 'ArrowRight') nextBtn.click();
+        prevBtn.addEventListener('click', function () {
+          if (currentSlide > 0) {
+            carousel.prev();
+          }
+        });
+        nextBtn.addEventListener('click', function () {
+          if (currentSlide < totalSlides - 1) {
+            carousel.next();
+          }
+        });
+
+        carouselElement.addEventListener('slid.bs.carousel', function (e) {
+          currentSlide = Array.from(slides).indexOf(e.relatedTarget);
+          updatePagination();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowLeft') prevBtn.click();
+          if (e.key === 'ArrowRight') nextBtn.click();
+        });
       });
-    });
-  </script>
+    </script>
 </body>
 
 </html>
